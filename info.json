@@ -1,0 +1,9 @@
+{
+	"name": "TechTreeDiagram",
+	"version": "1.0.0",
+	"title": "Tech Tree Diagram",
+	"author": "StephenB",
+	"factorio_version": "1.1",
+	"dependencies": ["base >= 1.1"],
+	"description": "Creates a GraphViz file in Factorio/script-output/TechTreeDiagram.gv. You can use GraphViz to view this as a PNG. For creators of mods and modpacks."
+}

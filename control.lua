@@ -1,7 +1,7 @@
 script.on_event(defines.events.on_player_created, function(ev)
 	local techIds = {} -- ids of all techs
 	local techEdges = {} -- id of prereq to list of ids of techs it's required for
-	for id, tech in pairs(game.technology_prototypes) do
+	for id, tech in pairs(prototypes.technology) do
 		table.insert(techIds, id)
 		for prereqId, _ in pairs(tech.prerequisites) do
 			if techEdges[prereqId] == nil then
@@ -22,5 +22,5 @@ script.on_event(defines.events.on_player_created, function(ev)
 	end
 	table.insert(lines, "}")
 
-	game.write_file("TechTreeDiagram.gv", table.concat(lines, '\n'))
+	helpers.write_file("TechTreeDiagram.gv", table.concat(lines, '\n'))
 end)
